@@ -1,0 +1,5 @@
+.display-ctn{
+    flex-grow: 1;
+    height: 100%;
+    background-color: var(--display-bg);
+}

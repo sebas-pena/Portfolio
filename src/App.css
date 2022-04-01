@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    max-height: -webkit-fill-available;
+}
+@font-face{
+    font-family: "SegoeUI";
+    src: url("./assets/fonts/SegoeUI.ttf");
+}
+#root,#App{
+    height: 100%;
+    font-family: "SegoeUI";
+}
+/* Themes */
+#App.dark {
+    /*  */
+    --text-color:#DDDDDD;
+    --border-color:#000000;
+    /* HEADER */
+    --header-bg:#0f0f0f;
+    /* DISPLAY */
+    --display-bg:#1f1f1f;
+    /* ASIDE */
+    --aside-social-bg:#0F0F0F;
+    --activity-bar-icons:#888688;
+    --activity-bar-icons-hover:#DDDDDD;
+    --files-bg:#161616;
+    --files-header-bg:#383838;
+    --file-hover-bg:#1F1F1F;
+    --file-active-bg:#262626;
+    --folder-scope-bg:#585858;
+    /* FOOTER */
+    --footer-bg: #007acc;
+}
+
+#App.light{
+
+}
+
+#App{
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+div.main-content{
+    display: flex;
+    height: 100%;
+}
+
+button{
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
