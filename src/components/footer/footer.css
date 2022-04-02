@@ -1,4 +1,20 @@
 footer{
-    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
     background-color: var(--footer-bg);
+    font-size: 12px;
+}
+footer a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+}
+
+footer div {
+    display: flex;
+}
+
+footer div p{
+    margin-right: 10px;
 }

@@ -15,10 +15,10 @@ aside{
     margin-top: 25px;
 }
 .aside__explorer-ctn{
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
     border-right: 1px solid var(--border-color);
     background-color: var(--files-bg);
 }
@@ -29,14 +29,17 @@ aside{
 }
 .aside__explorer-header h2{
     font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
 
 }
 
 .aside__section{
-    height: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    -webkit-transition: all 2s ease-in-out;
+    transition: all 500ms ease-out;
 }
+
 
 .aside__section-header{
     display: flex;
@@ -46,7 +49,7 @@ aside{
     background-color: var(--files-header-bg);
 }
 
-.aside__section.open .aside__section-header svg{
+.aside__section-header.open svg{
     transform: rotate(90deg);
 }
 
@@ -55,60 +58,16 @@ aside{
     transition: all 500ms;
 }
 .aside__section-header h2{
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
 }
 
-.aside__section-folder{
-    position: relative;
-    display: flex;
-    flex-direction: column;
+.aside__files-ctn{
+    height: 0;
+    transition: all 500ms linear;
+    overflow: auto;
 }
+.aside__files-ctn.open{
+    height: calc(100% - 22px);
 
-.aside__folder-header{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 20px;
-    background-color: transparent;
-}
-
-.aside__folder-header svg {
-    margin: 0 5px;
-    transition: all 500ms;
-}
-.aside__folder-header.open svg {
-    transform: rotate(90deg);
-}
-
-.aside__folder-header h3 {
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-}
-
-.aside__folder-scope{
-    position: absolute;
-    top: 20px;
-    width: 1px;
-    height: calc(100% - 20px);
-    margin-left: 10px;
-    background-color: var(--folder-scope-bg);
-}
-.aside__folder-file{
-    display: flex;
-    align-items: center;
-    height: 20px;
-    padding-left: 20px;
-    background-color: transparent;
-    font-size: 12px;
-}
-.aside__folder-file:hover{
-    background-color: var(--file-hover-bg);
-}
-.aside__folder-file.active{
-    background-color: var(--file-active-bg);
-}
-.aside__folder-file svg{
-    margin-right: 10px;
 }

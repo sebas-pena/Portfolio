@@ -17,13 +17,15 @@ body{
 }
 /* Themes */
 #App.dark {
-    /*  */
+    /* GENERAL */
     --text-color:#DDDDDD;
     --border-color:#000000;
     /* HEADER */
     --header-bg:#0f0f0f;
     /* DISPLAY */
     --display-bg:#1f1f1f;
+    --button-primary-color:#4361ee;
+    --button-secondary-color:#ffffff;
     /* ASIDE */
     --aside-social-bg:#0F0F0F;
     --activity-bar-icons:#888688;
@@ -32,6 +34,7 @@ body{
     --files-header-bg:#383838;
     --file-hover-bg:#1F1F1F;
     --file-active-bg:#262626;
+    --folder-bg:transparent;
     --folder-scope-bg:#585858;
     /* FOOTER */
     --footer-bg: #007acc;
@@ -48,8 +51,9 @@ body{
 }
 
 div.main-content{
+    flex-grow: 1;
     display: flex;
-    height: 100%;
+    overflow: hidden;
 }
 
 button{
