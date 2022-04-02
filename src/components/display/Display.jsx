@@ -1,5 +1,5 @@
-import "./display.css"
 import { PresentationScreen } from "./screens/PresentationScreen"
+import "./display.css"
 
 export const Display = () => {
 	return (

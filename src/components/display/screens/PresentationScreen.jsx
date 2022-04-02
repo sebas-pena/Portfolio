@@ -1,7 +1,13 @@
+import { useContext } from "react"
+
+import { AppContext } from "../../../context/AppContext"
 import "./presentationScreen.css"
-import curriculum from "../../../assets/curriculum.pdf"
-import perfilImg from "../../../assets/images/perfil.png"
 export const PresentationScreen = () => {
+	const context = useContext(AppContext)
+	console.log(context)
+	console.log(context[0].folders[0].files[0])
+	const perfilImg = context[0].folders[0].files[0].screenConfig.imageSrc
+	const curriculum = context[0].folders[0].files[0].screenConfig.cvSrc
 	return (
 		<div className="presentation-screen__ctn">
 			<div className="presentation-screen__main">
