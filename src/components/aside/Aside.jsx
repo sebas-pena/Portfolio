@@ -15,7 +15,6 @@ import { AppContext } from "../../context/AppContext"
 export const Aside = () => {
 	const [openSection, setOpenSection] = useState(true)
 	const [context] = useContext(AppContext)
-
 	const { folders } = context
 	const handleOpenSection = () => {
 		setOpenSection(!openSection)
