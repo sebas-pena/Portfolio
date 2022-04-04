@@ -1,0 +1,23 @@
+.project-screen__ctn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.project-screen__images{
+  max-width: 720px;
+  width: 100%;
+  margin: 20px;
+  aspect-ratio: 16/9;
+  background-size: 100% auto;
+  background-position: 0 0;
+  transition: all 6s linear;
+}
+
+.project-screen__images:hover{
+  background-position: 0 100%;
+
+}

@@ -1,6 +1,6 @@
 import { useContext } from "react"
 
-import { AppContext } from "../../../context/AppContext"
+import { AppContext } from "../../context/AppContext"
 import "./presentationScreen.css"
 export const PresentationScreen = () => {
 	const context = useContext(AppContext)

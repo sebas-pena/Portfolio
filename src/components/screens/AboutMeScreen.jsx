@@ -1,11 +1,11 @@
-import Image from "../../../assets/images/2.jpg"
+import Image from "../../assets/images/2.jpg"
 import {
 	JavaScriptLogo,
 	NextJsLogo,
 	NodeLogo,
 	ReactLogo,
 	SassLogo,
-} from "../../../assets/svgs/icons"
+} from "../../assets/svgs/icons"
 
 import "./aboutmeScreen.css"
 export const AboutMeScreen = () => {
