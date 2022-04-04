@@ -6,28 +6,15 @@ import {
   SassLogo,
 } from "../../assets/svgs/icons"
 
-import "./projectScreen.css"
-
 export const ProjectScreen = () => {
   return (
     <div className="project-screen__ctn">
       <h2>Clon de Mercado Libre</h2>
-      <div className="project-images__ctn">
-        <div className="project-screen__tech">
-          <div className="tech__icon react">
-            <ReactLogo size={38} color="#fff" />
-          </div>
-          <div className="tech__icon sass">
-            <SassLogo size={38} color="#fff" />
-          </div>
-        </div>
-
-        <div
-          className="project__image"
-          style={{ backgroundImage: `url(${projectImg})` }}
-        >
-          <div className="project-image__progress">En progreso</div>
-        </div>
+      <div
+        className="project__image"
+        style={{ backgroundImage: `url(${projectImg})` }}
+      >
+        <div className="project-image__progress">En progreso</div>
       </div>
       <div className="project-screen__links">
         <a
@@ -46,6 +33,14 @@ export const ProjectScreen = () => {
           <ExternalLinkIcon size={14} color="#ffffff" />
           <span> Página</span>
         </a>
+      </div>
+      <div className="project-screen__tech">
+        <div className="tech__icon react">
+          <ReactLogo size={38} color="#fff" />
+        </div>
+        <div className="tech__icon sass">
+          <SassLogo size={38} color="#fff" />
+        </div>
       </div>
     </div>
   )

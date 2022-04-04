@@ -1,0 +1,12 @@
+/* Components */
+
+@import url("./components/aside.css");
+@import url("./components/display.css");
+@import url("./components/folder.css");
+@import url("./components/header.css");
+@import url("./components/footer.css");
+/* Display Screens */
+
+@import url("./components/screens/aboutmeScreen.css");
+@import url("./components/screens/presentationScreen.css");
+@import url("./components/screens/projectScreen.css");

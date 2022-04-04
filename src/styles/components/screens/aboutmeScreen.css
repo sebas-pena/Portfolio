@@ -30,14 +30,13 @@
 
 .aboutme__skills{
   display: flex;
+  gap: 10px;
 }
 
 .aboutme__icon{
+  display: grid;
+  place-content: center;
   width: 48px;
   height: 48px;
   border-radius: 9px;
-}
-
-.aboutme__skills div:not(:first-child){
-  margin-left: 10px;
 }
