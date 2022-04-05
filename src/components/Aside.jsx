@@ -70,7 +70,7 @@ export const Aside = () => {
               onClick={handleOpenSection}
             >
               <ArrowIcon size={10} />
-              <h2>PORTFOLIO</h2>
+              <h2>PORTAFOLIO</h2>
             </button>
             <div
               ref={foldersCtnRef}

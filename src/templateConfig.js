@@ -31,7 +31,7 @@ export const templateConfig = {
       files: [
         {
           icon: "PersonalCard",
-          fileName: "Presentacion",
+          fileName: "Presentación",
           screen: "Presentation",
           screenConfig: {
             firstLine: "Hola, soy Pablo Peña",
