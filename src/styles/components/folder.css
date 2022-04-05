@@ -1,3 +1,8 @@
+.aside__folder-header svg path,
+.aside__folder-file svg path{
+  fill: var(--text-color);
+}
+
 
 .aside__section-folder{
   position: relative;
@@ -26,6 +31,7 @@
   margin: 0 5px;
   transition: all 500ms;
 }
+
 .aside__folder-header.open svg:first-child {
   transform: rotate(90deg);
 }

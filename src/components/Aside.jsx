@@ -1,6 +1,7 @@
 import { useState, useContext, useRef, useEffect } from "react"
 import { Folder } from "./Folder"
 import { AppContext } from "../context/AppContext"
+import { FolderContext } from "../context/FolderContext"
 
 import {
   ArrowIcon,
@@ -8,11 +9,12 @@ import {
   GitHubIcon,
   InstagramIcon,
   LinkedinIcon,
+  MoonIcon,
+  SunIcon,
 } from "../assets/svgs/icons"
 
-import { FolderContext } from "../context/FolderContext"
-
 export const Aside = () => {
+  const [theme, setTheme] = useState("light")
   const [openSection, setOpenSection] = useState(true)
   const [context] = useContext(AppContext)
   const activeFileRef = useRef(null)
@@ -23,6 +25,17 @@ export const Aside = () => {
 
   const foldersCtnRef = useRef(null)
 
+  const handleChangeTheme = () => {
+    const app = document.querySelector("#App")
+    if (theme == "dark") {
+      app.setAttribute("theme", "light")
+      setTheme("light")
+    } else {
+      app.setAttribute("theme", "dark")
+      setTheme("dark")
+    }
+  }
+
   useEffect(() => {
     const folderCtn = foldersCtnRef.current
     if (folderCtn) {
@@ -32,14 +45,20 @@ export const Aside = () => {
   }, [foldersCtnRef])
 
   console.log(context)
+
   return (
     <FolderContext.Provider value={activeFileRef}>
       <aside>
-        <div className="aside__social">
-          <FilesIcon size={23} />
-          <InstagramIcon size={23} />
-          <GitHubIcon size={23} />
-          <LinkedinIcon size={23} />
+        <div className="aside__left-bar">
+          <div className="aside__social-icons">
+            <FilesIcon size={23} />
+            <InstagramIcon size={23} />
+            <GitHubIcon size={23} />
+            <LinkedinIcon size={23} />
+          </div>
+          <button className="aside__change-theme" onClick={handleChangeTheme}>
+            {theme === "dark" ? <SunIcon size={23} /> : <MoonIcon size={23} />}
+          </button>
         </div>
         <div className="aside__explorer-ctn">
           <div className="aside__explorer-header">

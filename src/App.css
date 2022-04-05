@@ -37,7 +37,7 @@ body{
     font-family: "SegoeUI";
 }
 /* Themes */
-#App.dark {
+#App[theme="dark"] {
     /* GENERAL */
     --text-color:#DDDDDD;
     --border-color:#000000;
@@ -59,10 +59,37 @@ body{
     --folder-scope-bg:#585858;
     /* FOOTER */
     --footer-bg: #007acc;
+
+    /* PAGES CONFIG */
+    --aboutme-text-color: #ffffff; 
+    
 }
 
-#App.light{
-
+#App[theme="light"]{
+    /* GENERAL */
+    --text-color:#727272;
+    --border-color:#bbb5b5;
+    /* HEADER */
+    --header-bg:#DDDDDD;
+    /* DISPLAY */
+    --display-bg:#FFFFFF;
+    --button-primary-color:#4361ee;
+    --button-secondary-color:#ffffff;
+    /* ASIDE */
+    --aside-social-bg:#C3C7CD;
+    --activity-bar-icons:#535657;
+    --activity-bar-icons-hover:#000000;
+    --files-bg:#F3F3F3;
+    --files-header-bg:#d7d7d7;
+    --file-hover-bg:#DCDCDC;
+    --file-active-bg:#C7CBD1;
+    --folder-bg:transparent;
+    --folder-scope-bg:#a8a8a8;
+    /* FOOTER */
+    --footer-bg: #007acc;
+    
+    /* PAGES CONFIG */
+    --aboutme-text-color: #727272;
 }
 
 #App{

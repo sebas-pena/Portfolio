@@ -99,6 +99,7 @@
 .project__link-github{
   background-color: #ffffff;
   color: #333333;
+  border: 1px solid #333333;
 }
 .project__link-page{
   background-color: #333333;

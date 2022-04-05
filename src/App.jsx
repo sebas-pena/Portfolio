@@ -16,7 +16,7 @@ function App() {
   })
   return (
     <AppContext.Provider value={[context, setContext]}>
-      <div id="App" className="dark">
+      <div id="App" theme="light">
         <Header />
         <div className="main-content">
           <Aside />

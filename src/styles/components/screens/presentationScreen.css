@@ -9,6 +9,7 @@
 .presentation-screen__main{
   display: flex;
   align-items: center;
+  min-height: 167px;
 }
 
 .presentation-screen__main > div > h2{
