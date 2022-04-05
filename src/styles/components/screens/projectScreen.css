@@ -46,6 +46,7 @@
   aspect-ratio: 16/9;
   border-radius: 4px;
   overflow: hidden;
+  background-color: rgb(120, 120, 120);
   background-size: 100% auto;
   background-position: 0 0;
   transition: all 6s linear;
