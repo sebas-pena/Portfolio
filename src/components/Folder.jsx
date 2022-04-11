@@ -6,7 +6,8 @@ import {
 	GitHubIcon,
 	GitForkIcon,
 	PersonalCardIcon,
-} from "../assets/svgs/icons"
+} from "./icons/icons"
+
 import { AppContext } from "../context/AppContext"
 
 export const Folder = ({ name, files, folderIndex }) => {

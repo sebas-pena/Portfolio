@@ -3,7 +3,7 @@ import {
 	GitHubIcon,
 	ReactLogo,
 	SassLogo,
-} from "../../assets/svgs/icons"
+} from "../icons/icons"
 
 export const ProjectScreen = ({
 	title,
