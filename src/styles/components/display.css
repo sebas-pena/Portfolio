@@ -1,5 +1,4 @@
 .display-ctn{
     flex-grow: 1;
     background-color: var(--display-bg);
-    padding: 0 20px;
 }

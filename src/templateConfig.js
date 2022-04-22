@@ -1,10 +1,12 @@
-import presentationImg from "./assets/images/1.png"
-import aboutmeImg from "./assets/images/2.jpg"
+import aboutmeImg from "./assets/images/fotoaboutme.jpg"
+import perfil from "./assets/images/2.jpg"
 import cv from "./assets/curriculum.pdf"
 
 // Projects
 
 import MeliClonImg from "./assets/images/meli-clon.png"
+import SpotyThTImg from "./assets/images/spotytht.jpg"
+import SpaceInvadersImg from "./assets/images/space-invaders.jpg"
 
 export const templateConfig = {
   socialMedia: [
@@ -36,7 +38,7 @@ export const templateConfig = {
           screenConfig: {
             firstLine: "Hola, soy Pablo Peña",
             secondLine: "Desarrollador Front-End",
-            imageSrc: presentationImg,
+            imageSrc: perfil,
             cvSrc: cv,
             mail: "sebapena2002@gmail.com",
           },
@@ -70,6 +72,33 @@ export const templateConfig = {
             icons: ["react", "sass"],
             repoLink: "https://github.com/sebas-pena/meli-clone",
             deployLink: "https://meli-clon-pp.herokuapp.com/",
+            finished: false,
+          },
+        },
+        {
+          icon: "GitHub",
+          fileName: "Spotytht",
+          screen: "Project",
+          screenConfig: {
+            title: "Spotytht",
+            image: SpotyThTImg,
+            icons: ["react"],
+            repoLink: "https://github.com/sebas-pena/spotytht",
+            deployLink: "https://spotytht.herokuapp.com/",
+            finished: true,
+          },
+        },
+        {
+          icon: "GitHub",
+          fileName: "Space Invaders",
+          screen: "Project",
+          screenConfig: {
+            title: "Space Invaders",
+            image: SpaceInvadersImg,
+            icons: ["javascript"],
+            repoLink: "https://github.com/sebas-pena/space-invader",
+            deployLink: "https://pp-space-invader.000webhostapp.com/",
+            finished: false,
           },
         },
       ],
