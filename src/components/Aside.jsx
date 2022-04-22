@@ -14,6 +14,7 @@ import {
 } from "./icons/icons"
 
 export const Aside = () => {
+	const [openExplorer, setOpenExplorer] = useState(false)
 	const [theme, setTheme] = useState("light")
 	const [openSection, setOpenSection] = useState(true)
 	const [context] = useContext(AppContext)
@@ -51,7 +52,14 @@ export const Aside = () => {
 			<aside>
 				<div className="aside__left-bar">
 					<div className="aside__social-icons">
-						<FilesIcon size={23} />
+						<div
+							style={{ height: 24 }}
+							onClick={() => {
+								setOpenExplorer(!openExplorer)
+							}}
+						>
+							<FilesIcon size={23} />
+						</div>
 						<InstagramIcon size={23} />
 						<GitHubIcon size={23} />
 						<LinkedinIcon size={23} />
@@ -60,7 +68,7 @@ export const Aside = () => {
 						{theme === "dark" ? <SunIcon size={23} /> : <MoonIcon size={23} />}
 					</button>
 				</div>
-				<div className="aside__explorer-ctn">
+				<div className={"aside__explorer-ctn " + (openExplorer ? "open" : "")}>
 					<div className="aside__explorer-header">
 						<h2>Explorer</h2>
 					</div>

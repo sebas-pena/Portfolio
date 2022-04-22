@@ -17,7 +17,7 @@ export const ProjectScreen = ({
 	const techIcons = {
 		react: <ReactLogo size={38} color="#fff" />,
 		sass: <SassLogo size={38} color="#fff" />,
-		javascript: <JavaScriptLogo size={47} />,
+		javascript: <JavaScriptLogo size={48} />,
 	}
 	return (
 		<div className="project-screen__ctn">
