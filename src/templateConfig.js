@@ -1,5 +1,5 @@
-import presentationImg from "./assets/images/1.png"
-import aboutmeImg from "./assets/images/2.jpg"
+import aboutmeImg from "./assets/images/fotoaboutme.jpg"
+import perfil from "./assets/images/2.jpg"
 import cv from "./assets/curriculum.pdf"
 
 // Projects
@@ -38,7 +38,7 @@ export const templateConfig = {
 					screenConfig: {
 						firstLine: "Hola, soy Pablo Peña",
 						secondLine: "Desarrollador Front-End",
-						imageSrc: presentationImg,
+						imageSrc: perfil,
 						cvSrc: cv,
 						mail: "sebapena2002@gmail.com",
 					},

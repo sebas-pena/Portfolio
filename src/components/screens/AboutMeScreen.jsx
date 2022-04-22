@@ -1,4 +1,3 @@
-import Image from "../../assets/images/2.jpg"
 import {
 	JavaScriptLogo,
 	NextJsLogo,
@@ -8,11 +7,11 @@ import {
 	SassLogo,
 } from "../icons/icons"
 
-export const AboutMeScreen = () => {
+export const AboutMeScreen = ({ imageSrc }) => {
 	return (
 		<div className="aboutme__ctn">
 			<h2>Sobre Mi</h2>
-			<img src={Image} />
+			<img src={imageSrc} />
 			<div className="aboutme__description">
 				<p>
 					Mi nombre es Pablo, tengo 19 años y me apasiona el mundo de la
