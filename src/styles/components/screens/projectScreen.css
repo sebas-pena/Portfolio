@@ -1,5 +1,6 @@
 .project-screen__ctn{
   display: flex;
+  gap: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -19,7 +20,6 @@
   width: 100%;
 }
 .project-screen__tech{
-  margin: 10px 0;
   display: flex;
   gap: 5px;
 }
@@ -28,7 +28,6 @@
   align-items: center;
   padding: 5px;
   border-radius: 3px;
-  background-color: #ff0000;
 }
 
 .tech__icon.react{
@@ -42,14 +41,13 @@
   position: relative;
   width: 100%;
   max-width: 720px;
-  margin: 20px;
   aspect-ratio: 16/9;
   border-radius: 4px;
   overflow: hidden;
   background-color: rgb(120, 120, 120);
   background-size: 100% auto;
   background-position: 0 0;
-  transition: all 6s linear;
+  transition: background-position 6s linear;
 }
 
 .project-image__progress{

@@ -3,6 +3,7 @@ import {
 	GitHubIcon,
 	ReactLogo,
 	SassLogo,
+	JavaScriptLogo,
 } from "../icons/icons"
 
 export const ProjectScreen = ({
@@ -11,10 +12,12 @@ export const ProjectScreen = ({
 	icons,
 	repoLink,
 	deployLink,
+	finished,
 }) => {
 	const techIcons = {
 		react: <ReactLogo size={38} color="#fff" />,
 		sass: <SassLogo size={38} color="#fff" />,
+		javascript: <JavaScriptLogo size={47} />,
 	}
 	return (
 		<div className="project-screen__ctn">
@@ -23,7 +26,9 @@ export const ProjectScreen = ({
 				className="project__image"
 				style={{ backgroundImage: `url(${image})` }}
 			>
-				<div className="project-image__progress">En progreso</div>
+				{!finished ? (
+					<div className="project-image__progress">En progreso</div>
+				) : null}
 			</div>
 			<div className="project-screen__links">
 				<a className="project__link-github" target="_blank" href={repoLink}>
