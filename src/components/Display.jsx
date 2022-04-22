@@ -8,6 +8,7 @@ export const Display = () => {
   const [{ folders, display }] = useContext(AppContext)
 
   const activeFile = folders[display[0]].files[display[1]]
+  console.log(folders)
   console.log(activeFile)
 
   const screens = {

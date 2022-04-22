@@ -15,15 +15,15 @@ export const templateConfig = {
       url: "https://www.linkedin.com/in/pablo-pe%C3%B1a-15619420a/",
     },
     {
-      icon: "GitHub",
+      icon: "github",
       url: "https://github.com/sebas-pena",
     },
     {
-      icon: "ïnstagram",
+      icon: "instagram",
       url: "https://www.instagram.com/sebastian_.pena/",
     },
     {
-      icon: "Gmail",
+      icon: "gmail",
       url: "mailto://sebapena2002@gmail.com",
     },
   ],
