@@ -1,8 +1,7 @@
-import { useState, useContext, useRef, useEffect } from "react"
+import { useState, useContext, useEffect } from "react"
 import { Folder } from "./Folder"
-import { AppContext } from "../context/AppContext"
-import { FolderContext } from "../context/FolderContext"
 import { templateConfig } from "../templateConfig"
+import { StoreContext } from "../store/StoreProvider"
 import {
   ArrowIcon,
   FilesIcon,
@@ -21,38 +20,29 @@ const SocialIcon = {
 
 export const Aside = () => {
   const [openExplorer, setOpenExplorer] = useState(false)
-  const [theme, setTheme] = useState("light")
   const [openSection, setOpenSection] = useState(true)
-  const [context] = useContext(AppContext)
-  const activeFileRef = useRef(null)
   const { folders, socialMedia } = templateConfig
-  console.log(folders, socialMedia)
   const handleOpenSection = () => {
     setOpenSection(!openSection)
   }
 
-  const foldersCtnRef = useRef(null)
+  const [store, dispatch] = useContext(StoreContext)
+  const { activeFileRef, theme } = store
 
   const handleChangeTheme = () => {
-    const app = document.querySelector("#App")
-    if (theme == "dark") {
-      app.setAttribute("theme", "light")
-      setTheme("light")
-    } else {
-      app.setAttribute("theme", "dark")
-      setTheme("dark")
-    }
+    dispatch({
+      type: "SET_THEME",
+      payload: theme === "light" ? "dark" : "light",
+    })
   }
 
   useEffect(() => {
-    const folderCtn = foldersCtnRef.current
+    const folderCtn = activeFileRef
     if (folderCtn) {
       folderCtn.children[0].children[2].classList.toggle("active")
       activeFileRef.current = folderCtn.children[0].children[2]
     }
   }, [foldersCtnRef])
-
-  console.log(context)
 
   return (
     <FolderContext.Provider value={activeFileRef}>

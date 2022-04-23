@@ -1,15 +1,13 @@
 import { useContext } from "react"
-import { AppContext } from "../context/AppContext"
+import { StoreContext } from "../store/StoreProvider"
 import { AboutMeScreen } from "./screens/AboutmeScreen"
 import { PresentationScreen } from "./screens/PresentationScreen"
 import { ProjectScreen } from "./screens/ProjectScreen"
 
 export const Display = () => {
-  const [{ folders, display }] = useContext(AppContext)
-
-  const activeFile = folders[display[0]].files[display[1]]
-  console.log(folders)
-  console.log(activeFile)
+  const [store] = useContext(StoreContext)
+  const { folders, display } = store
+  const activeFile = folders[display[0]].screens[display[1]]
 
   const screens = {
     Aboutme: <AboutMeScreen {...activeFile.screenConfig} />,
