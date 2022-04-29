@@ -7,24 +7,21 @@ import {
   PersonalCardIcon,
 } from "./icons/icons"
 
-import { AppContext } from "../context/AppContext"
 import { StoreContext } from "../store/StoreProvider"
 
+const Icons = {
+  PersonalCard: <PersonalCardIcon size={12} />,
+  GitHub: <GitHubIcon size={12} />,
+  GitFork: <GitForkIcon size={12} />,
+}
 export const Folder = ({ name, files, folderIndex }) => {
   const handleOpenFolder = () => setOpenFolder(!openFolder)
-  const [context, setContext] = useContext(AppContext)
   const [openFolder, setOpenFolder] = useState(false)
-  const Icons = {
-    PersonalCard: <PersonalCardIcon size={12} />,
-    GitHub: <GitHubIcon size={12} />,
-    GitFork: <GitForkIcon size={12} />,
-  }
-  const [store, dispatch] = useContext(StoreContext)
+  const [{ activeFileRef }, dispatch] = useContext(StoreContext)
 
   const handleChangeFile = ({ currentTarget }) => {
-    FoldersContext.current.classList.toggle("active")
+    activeFileRef.classList.toggle("active")
     currentTarget.classList.toggle("active")
-    FoldersContext.current = currentTarget
 
     dispatch({
       type: "SET_DISPLAY",
@@ -32,6 +29,10 @@ export const Folder = ({ name, files, folderIndex }) => {
         currentTarget.getAttribute("folder"),
         currentTarget.getAttribute("file"),
       ],
+    })
+    dispatch({
+      type: "SET_ACTIVE_FILE",
+      payload: currentTarget,
     })
   }
 

@@ -1,12 +1,9 @@
-import { useRef } from "react"
 import { templateConfig } from "../templateConfig"
-
-const activeFileRef = useRef(null)
 
 export const initialStore = {
   folders: templateConfig.folders,
   display: [0, 0],
-  activeFileRef,
+  activeFileRef: null,
   theme: "light",
 }
 

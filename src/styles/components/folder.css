@@ -7,7 +7,7 @@
 .aside__section-folder{
   position: relative;
   display: flex;
-  height: 20px;
+  height: 25px;
   flex-direction: column;
   overflow: hidden;
 }
@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 20px;
+  min-height: 25px;
   background-color: var(--folder-bg);
 }
 .aside__folder-header:hover{
@@ -43,7 +43,7 @@
 
 .aside__folder-scope{
   position: absolute;
-  top: 20px;
+  top: 25px;
   width: 1px;
   height: calc(100% - 20px);
   margin-left: 10px;
@@ -52,7 +52,7 @@
 .aside__folder-file{
   display: flex;
   align-items: center;
-  height: 20px;
+  min-height: 25px;
   padding-left: 20px;
   background-color: transparent;
   font-size: 12px;

@@ -7,7 +7,7 @@ import { ProjectScreen } from "./screens/ProjectScreen"
 export const Display = () => {
   const [store] = useContext(StoreContext)
   const { folders, display } = store
-  const activeFile = folders[display[0]].screens[display[1]]
+  const activeFile = folders[display[0]].files[display[1]]
 
   const screens = {
     Aboutme: <AboutMeScreen {...activeFile.screenConfig} />,

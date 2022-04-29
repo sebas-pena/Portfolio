@@ -20,15 +20,22 @@ aside{
     gap: 25px;
 }
 .aside__left-bar svg{
-    cursor: pointer;
     width: 100%;
 }
+
 .aside__left-bar svg path {
     fill: var(--activity-bar-icons)
 }
 .aside__left-bar svg:hover path {
     fill : var(--activity-bar-icons-hover) 
 }
+.aside__explorer-icon{
+    cursor: default;
+}
+.aside__explorer-icon:hover > svg > path{
+    fill: var(--activity-bar-icons);
+}
+
 .aside__explorer-ctn{
     flex-grow: 1;
     display: flex;
@@ -60,7 +67,7 @@ aside{
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 5px 0;
+    padding: 7px 0;
     background-color: var(--files-header-bg);
 }
 
@@ -116,6 +123,13 @@ aside{
         left: 45px;
     }
 
+    .aside__explorer-icon{
+        cursor: pointer;
+    }
+    .aside__explorer-icon:hover > svg > path{
+        fill: var(--activity-bar-icons-hover);
+    }
+    
 
     
 }
